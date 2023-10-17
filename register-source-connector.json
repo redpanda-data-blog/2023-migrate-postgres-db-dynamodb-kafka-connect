@@ -1,0 +1,16 @@
+{
+   "name":"shipments-source-connector",
+   "config":{
+      "connector.class":"io.debezium.connector.postgresql.PostgresConnector",
+      "database.hostname":"postgres-db",
+      "plugin.name":"pgoutput",
+      "tasks.max": "1",
+      "database.port":"5432",
+      "database.user":"postgres",
+      "database.password":"mysecretpassword",
+      "database.dbname":"shipments",
+      "schema.include.list":"public",
+      "database.server.name":"shipments-server",
+      "topic.prefix":"shipments"
+   }
+}
