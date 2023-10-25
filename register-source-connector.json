@@ -9,8 +9,17 @@
       "database.user":"postgres",
       "database.password":"mysecretpassword",
       "database.dbname":"shipments",
+      "database.whitelist": "shipments",
+      "table.whitelist": "public.deliveries",
       "schema.include.list":"public",
       "database.server.name":"shipments-server",
-      "topic.prefix":"shipments"
-   }
+      "topic.prefix":"shipments",
+	  "snapshot.mode": "initial",
+      "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable": "false",
+      "transforms": "unwrap",
+      "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState"
+  }
 }
+

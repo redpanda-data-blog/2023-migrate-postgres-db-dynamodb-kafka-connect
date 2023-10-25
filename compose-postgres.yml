@@ -1,0 +1,17 @@
+version: "3.7"
+networks:
+  redpanda_network:
+    driver: bridge
+services:
+  postgres-db:
+    image: postgres:14
+    container_name: postgres-db
+    volumes:
+      - ./pgconfig.conf:/usr/share/postgresql/postgresql.conf.sample
+      - ./initial-data.sql:/docker-entrypoint-initdb.d/initial-data.sql
+    networks:
+      - redpanda_network
+    environment:
+      - POSTGRES_PASSWORD="mynotsosecretpassword"
+    ports:
+      - 5432:5432

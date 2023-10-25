@@ -15,10 +15,10 @@ CREATE TABLE deliveries (
     destination_state VARCHAR(50),
     recipient_name VARCHAR(255),
     recipient_phone VARCHAR(20),
-    weight DECIMAL(10, 2),
-    height DECIMAL(10, 2),
-    width DECIMAL(10, 2),
-    length DECIMAL(10, 2),
+    weight int,
+    height int,
+    width int,
+    length int,
     fee MONEY,
     created_at TIMESTAMP
 );

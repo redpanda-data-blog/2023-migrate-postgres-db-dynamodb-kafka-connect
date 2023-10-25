@@ -1,0 +1,17 @@
+{
+  "name": "ddb-sink-connector",
+  "config": {
+    "connector.class": "org.apache.camel.kafkaconnector.awsddbsink.CamelAwsddbsinkSinkConnector",
+    "tasks.max": "1",
+	"camel.kamelet.aws-ddb-sink.table":"Deliveries",
+	"camel.kamelet.aws-ddb-sink.accessKey": "YOUR_ACCESS_KEY",
+	"camel.kamelet.aws-ddb-sink.secretKey":"YOUR_SECRET_KEY",
+	"camel.kamelet.aws-ddb-sink.region":"YOUR_AWS_DYNAMODB_REGION",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+	"key.converter.schemas.enable": false,
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+	"topics":"gpt.public.deliveries",
+	"camel.sink.unmarshal": "jackson"
+  }
+}

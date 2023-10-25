@@ -1,0 +1,15 @@
+version: "3.7"
+networks:
+  redpanda_network:
+    driver: bridge
+services:
+  connect-instance:
+    image: kconnect:1.0.0
+    build:
+      context: '.'
+      dockerfile: connect.dockerfile
+    container_name: kafka-connect
+    networks:
+      - redpanda_network
+    ports:
+      - 8083:8083
