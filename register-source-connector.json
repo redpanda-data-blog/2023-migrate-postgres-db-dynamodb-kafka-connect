@@ -7,7 +7,7 @@
       "tasks.max": "1",
       "database.port":"5432",
       "database.user":"postgres",
-      "database.password":"mysecretpassword",
+      "database.password":"mynotsosecretpassword",
       "database.dbname":"shipments",
       "database.whitelist": "shipments",
       "table.whitelist": "public.deliveries",

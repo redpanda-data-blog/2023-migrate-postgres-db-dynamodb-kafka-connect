@@ -12,6 +12,6 @@ services:
     networks:
       - redpanda_network
     environment:
-      - POSTGRES_PASSWORD="mynotsosecretpassword"
+      - POSTGRES_PASSWORD=mynotsosecretpassword
     ports:
       - 5432:5432
