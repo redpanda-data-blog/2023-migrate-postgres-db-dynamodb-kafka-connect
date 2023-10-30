@@ -11,7 +11,7 @@
 	"key.converter.schemas.enable": false,
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "value.converter.schemas.enable": "false",
-	"topics":"gpt.public.deliveries",
+	"topics":"shipments.public.deliveries",
 	"camel.sink.unmarshal": "jackson"
   }
 }
