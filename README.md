@@ -1,2 +1,2 @@
-# pg-dynamodb
-Data migration from PostgreSQL to DynamoDB using Redpanda and Kafka Connect.
+# 2023-migrate-postgres-db-dynamodb-kafka-connect
+Migrating a Postgres Database to Amazon DynamoDB with Redpanda and Kafka Connect
